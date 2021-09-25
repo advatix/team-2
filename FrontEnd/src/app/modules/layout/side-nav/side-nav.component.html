@@ -1,0 +1,54 @@
+<aside class="main-sidebar" >
+    <section class="sidebar">
+        <ul class="sidebar-menu" data-widget="tree">
+            <li >
+                <a href="javascript:void(0);">
+                    <i class="bi bi-shop-window"></i>
+                    <span>WareHouse</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li [routerLink]="['/warehouse/create-warehouse']">
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>Create WareHouse</a>
+                    </li>
+                    <li [routerLink]="['/warehouse/warehouse-list']" >
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>WareHouse List</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li >
+                <a href="javascript:void(0);">
+                    <i class="bi bi-shop-window"></i>
+                    <span>Floor</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li [routerLink]="['/floor/create-floor']">
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>Create Floor</a>
+                    </li>
+                    <li [routerLink]="['/floor/floor-list']" >
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>Floor List</a>
+                    </li>
+                </ul>
+            </li>
+
+            
+            <li >
+                <a href="javascript:void(0);">
+                    <i class="bi bi-shop-window"></i>
+                    <span>Racks</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li [routerLink]="['/rack/create-rack']">
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>Create Rack</a>
+                    </li>
+                    <li [routerLink]="['/rack/rack-list']" >
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>Racks List</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</aside>

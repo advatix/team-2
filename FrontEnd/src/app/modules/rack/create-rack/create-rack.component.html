@@ -1,0 +1,79 @@
+<section class="content-header">
+    <h1>Add Rack</h1>
+    <ol class="breadcrumb">
+        <li><a [routerLink]="['/orders']" routerLinkActive="router-link-active" >Dashboard</a></li>
+        <li><a >Rack</a></li>
+      
+        <li class="active">Add Rack</li>
+    </ol>
+</section>
+<section class="content commonPageRight"> 
+   
+    <div class="col-md-8" style="background:white;">   
+        <div class="alert alert-success" *ngIf="showMsg" style="margin-top:10px;">
+            {{showMsg}}
+        </div> 
+                    <form class="form" [formGroup]="createFloorForm" autocomplete="off">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Rack Name <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="floorName" (keypress)="keypress($event)"/></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createFloorFormControl.floorName.touched || issubmitted) && createFloorFormControl.floorName.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                        
+                       
+                            <div class="col-md-6" style="margin-bottom:20px;">
+                                <label>Maximum Shelfs <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="maxRacks" (keypress)="keypress($event)"/></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createFloorFormControl.maxRacks.touched || issubmitted) && createFloorFormControl.maxRacks.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                        
+                        
+                           
+
+                            
+                            <h4>Dimensions (in centimeters)</h4>
+                            <div class="col-md-4">
+                                <label>Length <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="length" /></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createFloorFormControl.length.touched || issubmitted) && createFloorFormControl.length.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Width <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="width" /></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createFloorFormControl.width.touched || issubmitted) && createFloorFormControl.width.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Height <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="height" /></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createFloorFormControl.height.touched || issubmitted) && createFloorFormControl.height.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" (click)="submitFloor()">Submit</button>
+                        </div>
+                                             
+                    </form>
+                
+
+
+</div>
+ 
+
+</section>

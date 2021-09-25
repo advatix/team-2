@@ -1,0 +1,21 @@
+export const environment = {
+  production: true,
+  WEBSERVICE_URL:'http://34.196.236.28/fep/api/v1',
+  BASE_URL : "/fep/",
+  PAGE_SIZE:10,
+  envName: 'production',
+  keycloak: {
+    issuer: 'https://sso.xpdel.com:8081/auth/',
+    realm: 'XpDel',
+    clientId: 'HomeAlone',
+  },
+  DASHBOARD_URL : 'https://bi.advatix.net/app/main#/dashboards/5ed79c17aec265283404e44a/?embed=true&h=false&t=false&l=false&r=false',
+  INVENTORYREPORT : 'https://bi.advatix.net/app/main#/dashboards/5ede6e0eaec265283404e76a/?embed=true&h=false&t=false&l=false&r=false',
+  EXPIRATIONREPORT : 'https://bi.advatix.net/app/main#/dashboards/5edf072faec265283404e7c7/?embed=true&h=false&t=false&l=false&r=false',
+  INVENTORYLOGS : 'https://bi.advatix.net/app/main#/dashboards/5edf0cd1aec265283404e7ef/?embed=true&h=false&t=false&l=false&r=false',
+  AGINGREPORT : 'https://bi.advatix.net/app/main#/dashboards/5eeb7abd84d7461318c50fd1?folder=5ee7893acd76ec2238550527&embed=true&h=false&t=false&l=false&r=false',
+  HA_DASHBOARD_URL : 'https://bi.advatix.net/app/main#/dashboards/5e8b5c086721b001b4415d1a/?embed=true&h=false&t=false&l=false&r=false',
+  CANNEDREPORT : 'https://bi.advatix.net/app/main#/dashboards/5f59d673cc5cc7200c2cb5b6/?embed=true&h=false&t=false&l=false&r=false',
+  CXDASHBOARD : 'https://bi.advatix.net/app/main#/dashboards/5f6611acc541a22c4ca83808/?embed=true&h=false&t=false&l=false&r=false',
+  ADDRESSSCHECK : 'https://bi.advatix.net/app/main#/dashboards/5f6723a8c541a22c4ca838de/?embed=true&h=false&t=false&l=false&r=false',
+};

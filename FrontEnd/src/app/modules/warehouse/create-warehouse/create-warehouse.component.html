@@ -1,0 +1,86 @@
+<section class="content-header">
+    <h1>Add Warehouse</h1>
+    <ol class="breadcrumb">
+        <li><a [routerLink]="['/orders']" routerLinkActive="router-link-active" >Dashboard</a></li>
+        <li><a [routerLink]="['/manage-product']">Warehouse</a></li>
+      
+        <li class="active">Add Warehouse</li>
+    </ol>
+</section>
+<section class="content commonPageRight"> 
+   
+    <div class="col-md-8" style="background:white;">   
+        <div class="alert alert-success" *ngIf="showMsg" style="margin-top:10px;">
+            {{showMsg}}
+        </div> 
+                    <form class="form" [formGroup]="createWarehouseForm" autocomplete="off">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Warehouse Name <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="warehouseName" (keypress)="keypress($event)"/></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createWarehouseFormControl.warehouseName.touched || issubmitted) && createWarehouseFormControl.warehouseName.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                        
+                       
+                            <div class="col-md-6">
+                                <label>Maximum Floors <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="maxFloors" (keypress)="keypress($event)"/></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createWarehouseFormControl.maxFloors.touched || issubmitted) && createWarehouseFormControl.maxFloors.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                        
+                        
+                            <div class="col-md-12" style="margin-bottom:20px;">
+                                <label>Address <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="address" (keypress)="keypress($event)"/></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createWarehouseFormControl.address.touched || issubmitted) && createWarehouseFormControl.address.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+
+                            
+                            <h4>Dimensions (in centimeters)</h4>
+                            <div class="col-md-4">
+                                <label>Length <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="length" /></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createWarehouseFormControl.length.touched || issubmitted) && createWarehouseFormControl.length.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Width <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="width" /></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createWarehouseFormControl.width.touched || issubmitted) && createWarehouseFormControl.width.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Height <span style="color:red">*</span></label>
+                                    <span><input type="text" class="form-control" formControlName="height" /></span>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createWarehouseFormControl.height.touched || issubmitted) && createWarehouseFormControl.height.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" (click)="submitWarehouse()">Submit</button>
+                        </div>
+                                             
+                    </form>
+                
+
+
+</div>
+ 
+
+</section>

@@ -1,0 +1,16 @@
+.sidebar-menu>li>a {
+    padding: 10px !important;
+    display: block !important
+}
+
+.sidebar-menu>li>a>img {
+    padding: 0px 5px !important;
+}
+
+.sidebar-collapse .sidebar-menu>li>a>img {
+    padding: 0px auto !important;
+}
+
+.treeview-menu li a{
+    cursor: pointer!important;
+}
