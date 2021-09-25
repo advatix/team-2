@@ -67,7 +67,7 @@
                                                 <form class="form" [formGroup]="createFloorForm" autocomplete="off">
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <label>Floor Name <span style="color:red">*</span></label>
+                                                            <label>Rack Name <span style="color:red">*</span></label>
                                                                 <span><input type="text" class="form-control" formControlName="floorName" (keypress)="keypress($event)"/></span>
                                                                 <span class="text-danger error" 
                                                                     *ngIf="(createFloorFormControl.floorName.touched || issubmitted) && createFloorFormControl.floorName.errors?.required">
@@ -77,7 +77,7 @@
                                                     
                                                    
                                                         <div class="col-md-6" style="margin-bottom:20px;">
-                                                            <label>Maximum Racks <span style="color:red">*</span></label>
+                                                            <label>Maximum Shelf <span style="color:red">*</span></label>
                                                                 <span><input type="text" class="form-control" formControlName="maxRacks" (keypress)="keypress($event)"/></span>
                                                                 <span class="text-danger error" 
                                                                     *ngIf="(createFloorFormControl.maxRacks.touched || issubmitted) && createFloorFormControl.maxRacks.errors?.required">

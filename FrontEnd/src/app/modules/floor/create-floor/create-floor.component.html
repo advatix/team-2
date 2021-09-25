@@ -15,7 +15,7 @@
         </div> 
                     <form class="form" [formGroup]="createFloorForm" autocomplete="off">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <label>Floor Name <span style="color:red">*</span></label>
                                     <span><input type="text" class="form-control" formControlName="floorName" (keypress)="keypress($event)"/></span>
                                     <span class="text-danger error" 
@@ -23,9 +23,22 @@
                                         Required
                                     </span>
                             </div>
+
+                            <div class="col-md-4">
+                                <label>Select Warehouse <span style="color:red">*</span></label>
+                                   
+                                    <select class="form-control" formControlName="floorWarehouseId" >
+                                        <option value="">Select Warehouse</option>
+                                        <option *ngFor="let item of wareHouseData" value="{{item.warehouseId}}">{{item.warehouseName}}</option>
+                                    </select>
+                                    <span class="text-danger error" 
+                                        *ngIf="(createFloorFormControl.floorWarehouseId.touched || issubmitted) && createFloorFormControl.floorWarehouseId.errors?.required">
+                                        Required
+                                    </span>
+                            </div>
                         
                        
-                            <div class="col-md-6" style="margin-bottom:20px;">
+                            <div class="col-md-4" style="margin-bottom:20px;">
                                 <label>Maximum Racks <span style="color:red">*</span></label>
                                     <span><input type="text" class="form-control" formControlName="maxRacks" (keypress)="keypress($event)"/></span>
                                     <span class="text-danger error" 

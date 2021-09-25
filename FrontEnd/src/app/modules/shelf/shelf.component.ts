@@ -10,6 +10,8 @@ export class ShelfComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    window.dispatchEvent(new Event('resize'));
+    $('body').addClass('hold-transition skin-blue sidebar-mini  sidebar-collapse collapseSideAll');
   }
 
 }

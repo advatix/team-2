@@ -49,6 +49,36 @@
                     </li>
                 </ul>
             </li>
+            <li >
+                <a href="javascript:void(0);">
+                    <i class="bi bi-shop-window"></i>
+                    <span>Shelf</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li [routerLink]="['/shelf/create-shelf']">
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>Create Shelf</a>
+                    </li>
+                    <li [routerLink]="['/shelf/shelf-list']" >
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>Shelf List</a>
+                    </li>
+                </ul>
+            </li>
+            <li >
+                <a href="javascript:void(0);">
+                    <i class="bi bi-shop-window"></i>
+                    <span>Bin</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li [routerLink]="['/bin/create-bin']">
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>Create Bin</a>
+                    </li>
+                    <li [routerLink]="['/bin/bin-list']" >
+                        <a><i class="fa fa-circle-o"  routerLinkActive="router-link-active" ></i>Bin List</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </section>
 </aside>

@@ -11,6 +11,7 @@ export class CreateFloorComponent implements OnInit {
   createFloorForm: FormGroup;
   issubmitted: boolean;
   showMsg: any;
+  wareHouseData: any;
   constructor(
     private fb: FormBuilder,
     private router:Router,
@@ -24,7 +25,7 @@ export class CreateFloorComponent implements OnInit {
       width: new FormControl('', [Validators.required]),
       height: new FormControl('', [Validators.required]),
       floorFlag: new FormControl(1),
-      floorWarehouseId: new FormControl(0),
+      floorWarehouseId: new FormControl('',Validators.required),
       floorName: new FormControl('',Validators.required),
     });
 
@@ -33,11 +34,22 @@ export class CreateFloorComponent implements OnInit {
    }
 
   ngOnInit() {
-    
+    this.getWarehouseData();
   }
 
   get createFloorFormControl() {
     return this.createFloorForm.controls;
+  }
+
+  getWarehouseData() {
+    this.service.getWarehouseList().subscribe((data) => {
+     this.wareHouseData = data;
+     this.wareHouseData = this.wareHouseData.responseObject;
+      },
+      err => {
+        console.log('err', err);
+      }
+    );
   }
 
   keypress(event){
@@ -60,9 +72,10 @@ export class CreateFloorComponent implements OnInit {
         "maxRacks": this.createFloorForm.get('maxRacks').value,
         "floorDimension": this.createFloorForm.get('length').value+'X'+this.createFloorForm.get('width').value+'X'+this.createFloorForm.get('height').value,
         "warehouseFlag": 1,
-        "floorWarehouseId": 0,
+        "floorWarehouseId": this.createFloorForm.get('floorWarehouseId').value,
         "floorName": this.createFloorForm.get('floorName').value,
     }
+  
     if(this.createFloorForm.valid && this.issubmitted){
     this.service.addFloor(formData).subscribe(data =>{
       this.showMsg = "SuccessFully Created";

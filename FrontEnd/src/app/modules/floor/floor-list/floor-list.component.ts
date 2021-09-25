@@ -66,7 +66,7 @@ export class FloorListComponent implements OnInit {
         "maxRacks": this.createFloorForm.get('maxRacks').value,
         "floorDimension": this.createFloorForm.get('length').value+'X'+this.createFloorForm.get('width').value+'X'+this.createFloorForm.get('height').value,
         "warehouseFlag": 1,
-        "floorWarehouseId": 0,
+        "floorWarehouseId": this.createFloorForm.get('floorWarehouseId').value,
         "floorName": this.createFloorForm.get('floorName').value,
         "floorId":this.editDataById.floorId,
     }
